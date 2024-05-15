@@ -57,6 +57,7 @@ public class WebMvcConfiguration extends WebMvcConfigurationSupport {
         return docket;
     }
 
+
     /**
      * 设置静态资源映射
      * @param registry
