@@ -103,4 +103,17 @@ public class DishController {
         List<Dish> list = dishService.list(categoryId);
         return Result.success(list);
     }
+    /**
+     * 启用禁用菜品账号
+     * @param status
+     * @param id
+     * @return
+     */
+    @PostMapping("/status/{status}")
+    @ApiOperation("启用禁用菜品账号")
+    public Result startOrStop(@PathVariable Integer status,Long id){
+        log.info("启用禁用菜品账号：{},{}",status,id);
+        dishService.startOrStop(status,id);//后绪步骤定义
+        return Result.success();
+    }
 }
